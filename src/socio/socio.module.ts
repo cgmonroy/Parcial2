@@ -9,5 +9,6 @@ import { Club } from '../club/entities/club.entity';
   imports: [TypeOrmModule.forFeature([Socio, Club])],
   controllers: [SocioController],
   providers: [SocioService],
+  exports: [TypeOrmModule] 
 })
 export class SocioModule {}

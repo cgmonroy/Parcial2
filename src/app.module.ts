@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SocioModule } from './socio/socio.module';
 import { ClubModule } from './club/club.module';
+import { ClubMemberService } from './club-miembro/club-miembro.service';
+import { ClubMemberModule } from './club-miembro/club-miembro.module';
 
 @Module({
   imports: [
@@ -19,9 +21,10 @@ import { ClubModule } from './club/club.module';
     }),
     SocioModule,
     ClubModule,
+    ClubMemberModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, ClubMemberService],
 })
 export class AppModule {}
 
